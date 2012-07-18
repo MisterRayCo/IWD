@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree . 
+*/
+
+
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
+@import url(http://fonts.googleapis.com/css?family=Almendra);
+
+body
+{
+  font-family: 'Almendra', serif;
+  font-size: 14px;
+  background-color: #BDA895;
+  color: #5C4837;
+}
+
+a
+{
+  color: #302821;
+}
+
+#site
+{
+  margin: 0px auto;
+  width: 600px;
+  border-left: 1px dashed #5C4837;
+  padding-left: 10px;
+}
+
+#header
+{
+  font-family: 'Fugaz One', cursive;
+  font-size: 50px;
+  color: #302821;
+
+}
+
+#header a:link {
+	text-decoration:none;
+	border: 0px;
+}
+#header a:hover {
+	text-decoration: none;
+	border: 0px;
+}
+
+
+#footer
+{
+  margin-top: 50px;
+  font-family: 'Pontano Sans', sans-serif;
+  font-size: 11px;
+}
+
+.shelter {
+        float: left;
+        margin: 10px;
+
+}
+
+.shelter img {
+        height: 150px;
+        width: 150px;
+}
+
+
+.clear:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}

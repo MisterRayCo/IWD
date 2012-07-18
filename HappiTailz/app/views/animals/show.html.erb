@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag("#{@animal.photo}") %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @animal.name %>
+</p>
+
+<p>
+  <b>Animaltype:</b>
+  <%= @animal.animaltype %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @animal.age %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @animal.gender %>
+</p>
+
+
+<%= link_to 'Edit', edit_animal_path(@animal) %> |
+<%= link_to 'Back', animals_path %>

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= image_tag("#{@shelter.photo}") %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @shelter.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @shelter.address %>
+</p>
+
+<% @shelter.animals.each do |animal| %>
+
+                <%= link_to image_tag("/assets/#{animal.photo}"), animal_path(animal) %>
+
+<% end %>
+
+
+
+<%= link_to 'Edit', edit_shelter_path(@shelter) %> |
+<%= link_to 'Back', shelters_path %>
+
+<div class="clear"></div>

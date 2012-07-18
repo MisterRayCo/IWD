@@ -1,0 +1,45 @@
+<h1>Listing animals</h1>
+
+
+i<% @animals.each do |animal| %>
+        <div class="shelter">
+                <%= link_to image_tag("/assets/#{animal.photo}"), animal_path(animal) %>
+        <%= animal.name %>
+
+        </div>
+<% end %>
+
+
+
+
+
+<table>
+  <tr>
+    <th>Photo</th>
+    <th>Name</th>
+    <th>Animaltype</th>
+    <th>Age</th>
+    <th>Gender</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @animals.each do |animal| %>
+  <tr>
+    <td><%= animal.photo %></td>
+    <td><%= animal.name %></td>
+    <td><%= animal.animaltype %></td>
+    <td><%= animal.age %></td>
+    <td><%= animal.gender %></td>
+    <td><%= link_to 'Show', animal %></td>
+    <td><%= link_to 'Edit', edit_animal_path(animal) %></td>
+    <td><%= link_to 'Destroy', animal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'New Animal', new_animal_path %>
+
+<br />
+

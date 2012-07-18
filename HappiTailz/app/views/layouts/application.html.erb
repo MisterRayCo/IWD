@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HappiTailz</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+   
+   <div id="site">
+	<header id="header">
+
+	<%= link_to image_tag("/assets/shelter_logo.png"), '/'  %>	        
+
+		
+	</header>
+
+
+
+<%= yield %>
+
+        <footer>
+
+	        <%= link_to "Shelters", shelters_path %>
+        	<%= link_to "Animals", animals_path %>
+
+
+        </footer>
+
+  </div>
+
+</body>
+</html>
